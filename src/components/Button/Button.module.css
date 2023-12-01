@@ -1,0 +1,45 @@
+.button {
+    /* Общие стили для кнопки */
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Стили для варианта "text" */
+.text {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+}
+
+/* Стили для варианта "contained" */
+.contained {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+/* Стили для варианта "outlined" */
+.outlined {
+    background-color: transparent;
+    color: #2196f3;
+    border: 1px solid #2196f3;
+}
+
+/* Размеры кнопки */
+.small {
+    font-size: 12px;
+}
+
+.medium {
+    font-size: 16px;
+}
+
+.large {
+    font-size: 20px;
+}
