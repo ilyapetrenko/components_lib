@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './Button.module.css';
+import cn from 'classnames'
 
-interface ButtonProps {
+export interface ButtonProps {
   variant?: 'text' | 'contained' | 'outlined';
   disabled?: boolean;
   onClick?: () => void;
   size?: 'small' | 'medium' | 'large';
-  children?: React.ReactNode;
+  title?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,15 +15,21 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
   onClick,
   size = 'medium',
-  children,
+  title = 'Button'
+
 }) => {
+  const mainCn = cn(
+      styles.button,
+      styles[variant],
+      styles[size],
+  )
   return (
     <button
-      className={`${styles.button} ${styles[variant]} ${styles[size]}`}
+      className={mainCn}
       onClick={onClick}
       disabled={disabled}
     >
-      {children}
+      {title}
     </button>
   );
 };
